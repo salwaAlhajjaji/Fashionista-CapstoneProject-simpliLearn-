@@ -8,10 +8,18 @@ const Product = require("../model/product.model");
  */
 exports.CartList = async (req, res) => {
     Cart.findOne({ _userId: req.params.id }, )
-    .populate("products._id", "name price")
+    .populate("products")
     .exec((err, result) => {
-      if (err) return handleError(err);
-      res.send(result.products);
+      if (err) {
+        return res.send(err);
+      }else{
+        if(result!=null){
+          return res.send(result.products);
+        }
+        else{
+          return res.send(result)
+        }
+      }
     });
 };
 

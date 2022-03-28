@@ -8,7 +8,8 @@ const mongoose = require("./db/mongoose");
 const ProductRoutes = require("./db/routes/product.routes");
 const FavRoutes = require('./db/routes/fav.routes')
 const CartRoutes = require('./db/routes/cart.routes')
-const AuthRoutes = require('./db/routes/user.routes')
+const AuthRoutes = require('./db/routes/auth.routes')
+const UserRoutes = require('./db/routes/user.routes')
 
 // import middleware
 const passportJWT = require('./db/middleware/passport.JWT')()
@@ -27,6 +28,9 @@ app.use('/wish-list', FavRoutes);
 app.use('/cart', CartRoutes);
 // /*** Auth ROUTES ***/
 app.use('/auth', AuthRoutes);
+// /*** User ROUTES ***/
+app.use('/user', UserRoutes);
+
 
 
 // /**

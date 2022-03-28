@@ -9,15 +9,15 @@
                 <h3 class="mb-4">Edit Product Information</h3>
                 <!-- <form action="index.html"> -->
                     <div class="form-floating mb-3">
-                        <input #name class="form-control" id="pname" type="text" placeholder="watch" required>
+                        <input #name value="{{product.name}}" class="form-control" id="pname" type="text" placeholder="watch" required>
                         <label for="pname">Product Name</label>
-                    </div>
+                    </div> 
                     <div class="form-floating mb-3">
-                        <input #desc class="form-control" id="pdescription" type="text" placeholder="gold watch" required>
+                        <input #desc value="{{product.description}}" class="form-control" id="pdescription" type="text" placeholder="gold watch" required>
                         <label for="pdescription">Product Description</label>
-                    </div>
+                    </div> 
                     <div class="form-floating mb-3">
-                        <input #price class="form-control" id="price" type="text" placeholder="150" required>
+                        <input #price value="{{product.price}}" class="form-control" id="price" type="text" placeholder="150" required>
                         <label for="price">Price</label>
                     </div>
                     <div class="form-group d-flex justify-content-end">

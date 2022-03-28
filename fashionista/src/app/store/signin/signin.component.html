@@ -1,26 +1,28 @@
 <div class="container p-3 my-4">
           <div class="row justify-content-center">
               <!-- login -->
-            <div class="col-lg-6 "  *ngIf="userlogin">
+            <div class="col-lg-6 " *ngIf="userlogin">
               <div class="card">
                 <div class="card-body p-lg-5">
                   <h3 class="mb-4">Hi, welcome back! 👋👋</h3>
                   <p class="text-muted text-sm mb-5"></p>
-                  <form id="loginForm" action="index.html">
+                  <!-- <form id="loginForm" action="index.html"> -->
                     <div class="form-floating mb-3">
-                      <input class="form-control" id="floatingInput" type="email" placeholder="name@example.com" required>
+                      <input #emailR class="form-control" id="floatingInput" type="email" placeholder="name@example.com" required>
                       <label for="floatingInput">Email address</label>
                     </div>
                     <div class="form-floating mb-3">
-                      <input class="form-control" id="floatingPassword" type="password" placeholder="Password" required>
+                      <input #passwordR class="form-control" id="floatingPassword" type="password" placeholder="Password" required>
                       <label for="floatingPassword">Password</label>
                     </div>
                     <!-- <div class="form-check mb-3">
                       <input class="form-check-input" type="checkbox" name="remember" id="remember">
                       <label class="form-check-label" for="remember">Remember me</label>
                     </div> -->
-                    <button class="btn btn-darken" type="button">Submit</button>
-                  </form>
+                    <button (click)="login(emailR.value, passwordR.value)" class="btn btn-darken" type="button">Login</button>
+                    <br>
+                    <span style="color: red;">{{message}}</span> 
+                  <!-- </form> -->
                 </div>
                 <div class="card-footer bg-transparent px-lg-5 py-lg-4">
                   <div class="text-sm text-muted">Don't have an account? <a (click)="user_register()" class="reset-a" style="cursor: pointer;">Register</a>.</div>
@@ -33,17 +35,17 @@
                 <div class="card-body p-lg-5">
                   <h3 class="mb-4">Get started with Fashion Store</h3>
                   <p class="text-muted text-sm mb-5">This is the First step to be with latest Fashion Trends, Start create your account.</p>
-                  <form action="index.html">
+                  <!-- <form action="index.html"> -->
                     <div class="form-floating mb-3">
-                      <input class="form-control" id="fullname" type="text" placeholder="Jasseca Andrew" required>
+                      <input #name class="form-control" id="fullname" type="text" placeholder="Jasseca Andrew" required>
                       <label for="fullname">Full Name</label>
                     </div>
                     <div class="form-floating mb-3">
-                      <input class="form-control" id="floatingInput" type="email" placeholder="name@example.com" required>
+                      <input #email class="form-control" id="floatingInput" type="email" placeholder="name@example.com" required>
                       <label for="floatingInput">Email address</label>
                     </div>
                     <div class="form-floating mb-3">
-                      <input class="form-control" id="floatingPassword" type="password" placeholder="Password" required>
+                      <input #password class="form-control" id="floatingPassword" type="password" placeholder="Password" required>
                       <label for="floatingPassword">Password</label>
                     </div>
                     <!-- <div class="form-check mb-3">
@@ -51,9 +53,11 @@
                       <label class="form-check-label" for="agree">I agree with the <a href="#">Terms & Conditions</a>.</label>
                     </div> -->
                     <div class="form-group">
-                      <button class="btn btn-lighten" id="regidter" type="button" name="registerSubmit" >Register</button>
+                      <button (click)="signup(name.value, email.value, password.value)" class="btn btn-lighten" id="regidter" type="button" name="registerSubmit" >Register</button>
                     </div>
-                  </form>
+                    <br>
+                    <span style="color: red;">{{message}}</span> 
+                  <!-- </form> -->
                 </div>
                 <div class="card-footer bg-transparent px-lg-5 py-lg-4">
                   <div class="text-sm text-muted">Already have an account? <a (click)="user_login()" class="reset-a" style="cursor: pointer;">Login</a>.</div>

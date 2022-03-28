@@ -8,11 +8,19 @@ const Product = require("../model/product.model");
  */
 exports.wishList = async (req, res) => {
   Favourite.findOne({ _userId: req.params.id })
-    .populate("products._id")
+    .populate("products")
     .exec((err, result) => {
-      if (err) return handleError(err);
-      res.send(result.products);
-      console.log(result.products)
+      if (err) {
+        return res.send(err);
+      }else{
+        if(result!=null){
+          return res.send(result.products);
+        }
+        else{
+          return res.send(result)
+        }
+      }
+      
     });
 };
 
@@ -36,7 +44,7 @@ exports.addProductToList = async (req, res) => {
         // res.send(err);
       }
     });
-    return res.status(201).send(wishList);
+    return res.send(wishList);
   } else {
     // set data to schema
     let newWishList = new Favourite({
@@ -69,7 +77,7 @@ exports.emptyProductsList = (req, res) => {
 /**
  * DELETE /wish-list/pd/:id
  * Purpose: Delete a product
- */
+ */ 
 exports.deleteProduct = async (req, res) => {
   // We want to delete the specified product (document with id in the URL)
   // get data from request
@@ -80,11 +88,13 @@ exports.deleteProduct = async (req, res) => {
   wishList.products.pull(product_id);
   wishList.save((err, result) => {
     if (!err) {
+      // console.log(result)
       //  res.send(result);
+      
     } else {
       console.log(err);
       //  res.send(err);
     }
   });
-  return res.status(201).send(wishList);
+  return res.send(wishList);
 };

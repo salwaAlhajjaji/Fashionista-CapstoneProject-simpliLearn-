@@ -1,3 +1,4 @@
+import { CheckoutComponent } from './store/checkout/checkout.component';
 import { HomeAdminComponent } from './admin/home-admin/home-admin.component';
 import { EditUserComponent } from './admin/edit-user/edit-user.component';
 import { EditProductComponent } from './admin/edit-product/edit-product.component';
@@ -15,6 +16,7 @@ import { ProductsComponent } from './store/products/products.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NewUserComponent } from './admin/new-user/new-user.component';
+import { AuthGuard } from './guard/auth.guard';
 
 const routes: Routes = [
     // main page routing
@@ -26,6 +28,7 @@ const routes: Routes = [
   {path: 'product-details/:id', component: PrdouctDetailsComponent},
   {path: 'wish-list', component: WishListComponent},
   {path: 'cart', component: CartComponent},
+  {path: 'checkout', component: CheckoutComponent},
    // admin routing
   // { path: 'admin', component: HomeAdminComponent, children :[
   //   // { path: '', component: HomeAdminComponent },
@@ -41,6 +44,8 @@ const routes: Routes = [
   { path: 'new-user', component: NewUserComponent },
   { path: 'edit-user/:id', component: EditUserComponent },
   { path: 'admin', component: HomeAdminComponent },
+  { path: '', canActivate: [ AuthGuard ], component: HomeComponent
+}
 
 
 

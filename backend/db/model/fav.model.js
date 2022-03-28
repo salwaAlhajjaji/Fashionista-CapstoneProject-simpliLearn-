@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const FavSchema = new mongoose.Schema({
   _userId: { type: String, required: true },
-  products: [ { _id: {type: mongoose.Schema.Types.ObjectId, ref: "Product", }, },]
+  products: [  {type: mongoose.Schema.Types.ObjectId, ref: "Product", }]
   
   // _userId: {  type: mongoose.Schema.Types.ObjectId, ref: "User",  required: true },
 

@@ -1,6 +1,6 @@
 <div class="container p-3">
     <div class="row my-5 mx-auto justify-content-center">
-            
+             
             <div *ngFor="let product of products" class="card col-3 pb-0 m-2 my-3 mx-4"> 
                 <a class="reset-a" routerLink="/product-details/{{product._id}}" routerLinkActive="active">
                 <img class='mx-auto card-img-top' src="https://i.imgur.com/pjITBzX.jpg" width="auto" height="auto" />
@@ -11,8 +11,8 @@
                 </div>
               </a>
               <div class="card-footer bg-transparent pb-1 mb-0 mx-auto">
-                <a (click)="addToCart('621f49c415aa2b1b3202114f',product._id)" class="btn btn-darken">ADD TO CART</a>&nbsp;&nbsp;
-                <a (click)="addToWishlist('621f49c415aa2b1b3202114f',product._id)" class="pt-3 btn btn-transparent"><i class="fi fi-rr-heart" style="font-size:25px"></i></a>
+                <a (click)="addToCart(userID,product._id)" class="btn btn-darken">ADD TO CART</a>&nbsp;&nbsp;
+                <a (click)="addToWishlist(userID,product._id)" class="pt-3 btn btn-transparent"><i class="fi fi-rr-heart" style="font-size:25px"></i></a>
             </div>
             </div>
             

@@ -21,6 +21,7 @@ import { NewUserComponent } from './admin/new-user/new-user.component';
 import { EditUserComponent } from './admin/edit-user/edit-user.component';
 import { EditProductComponent } from './admin/edit-product/edit-product.component';
 import { ProductsListComponent } from './admin/products-list/products-list.component';
+import { CheckoutComponent } from './store/checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { ProductsListComponent } from './admin/products-list/products-list.compo
     EditUserComponent,
     EditProductComponent,
     ProductsListComponent,
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,

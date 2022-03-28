@@ -1,6 +1,8 @@
+import { Router } from '@angular/router';
+import { LogedinServiceService } from './../../services/logedin/logedin-service.service';
 import { Component, OnInit } from '@angular/core';
-import { ApiServiceService } from 'src/app/api-service.service';
-import { Products } from 'src/app/models/products/products.model';
+import { ApiServiceService } from 'src/app/services/api/api-service.service';
+import { Product } from 'src/app/models/products/products.model';
 
 @Component({
   selector: 'app-wish-list',
@@ -9,15 +11,34 @@ import { Products } from 'src/app/models/products/products.model';
 })
 export class WishListComponent implements OnInit {
 
-  products: Products[] = [];
+  products: Product[] = [];
+  userID: string ='';
+  isLogedIn: boolean = false;
 
-  constructor(private  api: ApiServiceService) { }
+  constructor(private  api: ApiServiceService, private logedin :LogedinServiceService, private router: Router) { }
 
   ngOnInit(): void {
-     this.api.getWishList('621f49c415aa2b1b3202114f').subscribe((products:Products[]) => {
-      this.products = products
-      console.log(products)
+    this.isLogedIn = this.logedin.isLogedIn();
+    if(this.isLogedIn){
+      this.userID = this.logedin.getUserId();
+      this.api.getWishList(this.userID).subscribe((products:Product[]) => {
+        this.products = products
+      })
+    }
+      else{
+        this.router.navigate([ 'signin' ]);
+      }
+  }
+  
+  deleteFromWishList(id:string, product_id:string){
+    this.api.deleteFromWishList(id, product_id).subscribe(res => {
+      this.products = this.products.filter(val => val._id !== product_id);
     })
+  }
 
+  deleteWishList(id:string){
+    this.api.deleteWishList(id).subscribe(res => {
+      this.products = []
+    })
   }
 }
