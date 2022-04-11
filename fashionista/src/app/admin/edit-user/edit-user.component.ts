@@ -29,7 +29,7 @@ export class EditUserComponent implements OnInit {
 editUser( name:string, email:string){
   this.api.editUser(this.user_id, name, email).subscribe(res => {
     // this.router.navigate(['../'], { relativeTo: this.route });
-    this.router.navigate(['/users-admin'], { relativeTo: this.route });
+    this.router.navigate(['admin/users']);
     })
 }
 }

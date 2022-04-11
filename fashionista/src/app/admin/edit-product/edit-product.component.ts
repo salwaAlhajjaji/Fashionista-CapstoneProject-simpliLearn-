@@ -25,9 +25,7 @@ export class EditProductComponent implements OnInit {
   }
 editProduct( name:string, desc:string, price:string){
   this.api.editProduct(this.product_id, name, desc, +price).subscribe(res => {
-    // this.router.navigate(['../'], { relativeTo: this.route });
-    this.router.navigate(['/products-list'], { relativeTo: this.route });
-
+    this.router.navigate(['admin/products'] );
     })
 }
 }

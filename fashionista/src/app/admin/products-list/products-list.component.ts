@@ -23,6 +23,7 @@ export class ProductsListComponent implements OnInit {
   deleteProduct(id:string){
     this.api.deleteProductById(id).subscribe(res => {
       this.products = this.products.filter(val => val._id !== id);
+      this.router.navigate(['admin/products'] );
     })
   }
   

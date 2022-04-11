@@ -17,7 +17,6 @@ export class NewUserComponent implements OnInit {
 
 addUser(name:string, email:string, password:string){
   this.api.addNewUser(name, email, password).subscribe(res => {
-    this.router.navigate(['/users-admin'], { relativeTo: this.route });
-  })
+    this.router.navigate(['admin/users']);  })
 }
 }

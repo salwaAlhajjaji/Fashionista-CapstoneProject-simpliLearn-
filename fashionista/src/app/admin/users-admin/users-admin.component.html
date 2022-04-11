@@ -3,7 +3,7 @@
         <!-- Add New User button -->
         <div class="row pb-5">
             <div class="d-flex justify-content-end">
-                <a routerLink="/new-user" routerLinkActive="active" class="btn btn-darken">Add New User <i class="fi fi-rr-user-add" style="font-size:20px"></i></a>
+                <a routerLink="new-user" routerLinkActive="active" class="btn btn-darken">Add New User <i class="fi fi-rr-user-add" style="font-size:20px"></i></a>
             </div>
         </div>  
         <!-- Users List -->
@@ -18,12 +18,15 @@
                 <p class="card-text">{{user.email}}</p>
             </div>
             <div class="col-4 align-items-center d-flex justify-content-end">
-                <a routerLink="/edit-user/{{user._id}}" routerLinkActive="active"class="pt-3 btn btn-transparent"><i class="fi fi-rr-edit"
+                <a routerLink="./edit-user/{{user._id}}" routerLinkActive="active"class="pt-3 btn btn-transparent"><i class="fi fi-rr-edit"
                         style="font-size:25px"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a (click)="deleteUser(user._id)" class="pt-3 btn btn-transparent"><i class="fi fi-rr-user-remove" style="font-size:25px"></i></a>
+                        <a (click)="deleteUser(user._id)" class="pt-3 btn btn-transparent" ><i class="fi fi-rr-trash" style="font-size:25px"></i></a>
+
+                <!-- <a (click)="deleteUser(user._id)" class="pt-3 btn btn-transparent" ><i class="fi fi-rr-user-remove" style=" font-size:25px"></i></a> -->
             </div>
         </div>
         <hr>
        
     </div>
 </div>
+

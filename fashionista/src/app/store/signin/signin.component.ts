@@ -47,6 +47,8 @@ export class SigninComponent implements OnInit {
         localStorage.setItem('Token', token);
         localStorage.setItem('User', user._id);
         this.router.navigate([ '/' ]);
+        window.location.reload();
+
       }
       else{
         this.message = result.message
@@ -63,6 +65,8 @@ export class SigninComponent implements OnInit {
           localStorage.setItem('Token', token);
           localStorage.setItem('User', user._id);
           this.router.navigate([ '/' ]);
+          window.location.reload();
+
         }
         else{
           this.message = result.message

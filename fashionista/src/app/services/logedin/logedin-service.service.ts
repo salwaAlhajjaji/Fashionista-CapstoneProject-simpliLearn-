@@ -35,5 +35,7 @@ export class LogedinServiceService {
     localStorage.removeItem('User')
     this.token =  ''
     this.user = ''
+    window.location.reload();
+
   }
 }

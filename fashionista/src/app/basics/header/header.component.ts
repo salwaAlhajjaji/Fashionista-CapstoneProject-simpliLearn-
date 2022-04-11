@@ -20,5 +20,7 @@ export class HeaderComponent implements OnInit {
     this.logedin.logOut();
     this.isLogedIn = this.logedin.isLogedIn();
     this.router.navigate([ '/' ]);
+    window.location.reload();
+
   }
 }

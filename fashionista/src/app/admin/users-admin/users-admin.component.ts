@@ -20,7 +20,6 @@ export class UsersAdminComponent implements OnInit {
  
   ngOnInit(): void {
      this.api.getAllUsers().subscribe((users:User[]) => {
-       console.log(users)
       this.users = users
     },
     (err: HttpErrorResponse) => {

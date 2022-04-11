@@ -3,7 +3,7 @@
          <!-- Add New Product button -->
          <div class="row pb-5">
             <div class="d-flex justify-content-end">
-            <a routerLink="/new-product" routerLinkActive="active" class="btn btn-darken">Add New Product <i class="fi fi-rr-plus-small" style="font-size:25px"></i>
+            <a routerLink="new-product" routerLinkActive="active" class="btn btn-darken">Add New Product <i class="fi fi-rr-plus-small" style="font-size:25px"></i>
             </a>
            </div>
         </div>
@@ -19,7 +19,7 @@
                     <p class="card-text pt-2">{{product.price}}$</p> 
                 </div>
                 <div class="col-4 align-items-center d-flex justify-content-end">
-                    <a routerLink="/edit-product/{{product._id}}" routerLinkActive="active" class="pt-3 btn btn-transparent"><i class="fi fi-rr-edit" style="font-size:25px"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a routerLink="edit-product/{{product._id}}" routerLinkActive="active" class="pt-3 btn btn-transparent"><i class="fi fi-rr-edit" style="font-size:25px"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
                     <a (click)="deleteProduct(product._id)" class="pt-3 btn btn-transparent"><i class="fi fi-rr-trash" style="font-size:25px"></i></a>
                 </div>
             </div>
@@ -27,3 +27,4 @@
         </div>
     </div>
 </div>
+<!-- <router-outlet></router-outlet> -->

@@ -22,6 +22,8 @@ import { EditUserComponent } from './admin/edit-user/edit-user.component';
 import { EditProductComponent } from './admin/edit-product/edit-product.component';
 import { ProductsListComponent } from './admin/products-list/products-list.component';
 import { CheckoutComponent } from './store/checkout/checkout.component';
+import { ProductsHomeComponent } from './admin/products-home/products-home.component';
+import { UsersHomeComponent } from './admin/users-home/users-home.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,8 @@ import { CheckoutComponent } from './store/checkout/checkout.component';
     EditProductComponent,
     ProductsListComponent,
     CheckoutComponent,
+    ProductsHomeComponent,
+    UsersHomeComponent,
   ],
   imports: [
     BrowserModule,

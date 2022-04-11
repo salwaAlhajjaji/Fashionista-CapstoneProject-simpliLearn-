@@ -31,7 +31,9 @@ export class ProductsComponent implements OnInit {
       })
     }
       else{
-        this.router.navigate([ 'signin' ]);
+          if(confirm("You must signin")) {
+            this.router.navigate([ 'signin' ]);
+          }
       }
   }
   addToCart(user_id:string, product_id:string){
@@ -42,7 +44,9 @@ export class ProductsComponent implements OnInit {
       })
     }
       else{
-        this.router.navigate([ 'signin' ]);
+        if(confirm("You must signin")) {
+          this.router.navigate([ 'signin' ]);
+        }
       }
   }
 }

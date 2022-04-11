@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,22 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SigninAdminComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router, ) { }
+  message = ''
 
   ngOnInit(): void {
   }
-//show hide div variables
-userlogin = true;
-userregister = false;
-//Buttons clicks functionalities 
-user_register()
-{
-  this.userlogin = false;
-  this.userregister = true;
-}
-user_login()
-{
-  this.userlogin = true;
-  this.userregister = false;
+login( email:string, password:string){
+  
+if(email == 'admin' && password == 'admin'){
+        localStorage.setItem('AdminToken', email);
+        this.router.navigate([ '/admin' ]);
+      }
+      else{
+        this.message = 'Email or password wrong!!'
+      }
+
 }
 }

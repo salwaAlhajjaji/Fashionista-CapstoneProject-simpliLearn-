@@ -16,7 +16,7 @@ export class NewProductComponent implements OnInit {
 }
 addProduct(name:string, desc:string, price:string){
   this.api.addNewProduct(name, desc, +price).subscribe(res => {
-    this.router.navigate(['../'], { relativeTo: this.route });
+    this.router.navigate(['admin/products'], );
   })
 }
 }
