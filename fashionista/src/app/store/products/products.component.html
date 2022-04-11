@@ -4,6 +4,8 @@
             <div *ngFor="let product of products" class="card col-3 pb-0 m-2 my-3 mx-4"> 
                 <a class="reset-a" routerLink="/product-details/{{product._id}}" routerLinkActive="active">
                 <img class='mx-auto card-img-top' src="https://i.imgur.com/pjITBzX.jpg" width="auto" height="auto" />
+                <!-- <img class='mx-auto card-img-top' src="../../../assets/image-gallery.png" /> -->
+
                 <div class="card-body text-center mx-auto">
                     <h5 class="card-title font-weight-bold">{{product.name}}</h5>
                     <p class="card-text">{{product.price}}$</p> 
