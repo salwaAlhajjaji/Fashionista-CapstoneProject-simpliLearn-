@@ -31,19 +31,21 @@ const Product = require('../model/product.model')
    * POST /product
    * Purpose: add new product
    */
-   exports.newProduct =  (req, res) => {
+   exports.newProduct =  async (req, res) => {
     // get data from request
     let product_name = req.body.name;
     let product_desc = req.body.description;
     let product_price = req.body.price;
+    // let product_image = req.file.filename
     // set data to schema
     let newProduct = new Product({
       name: product_name,
       description: product_desc,
       price: product_price,
+      // image: product_image
     });
     // save data to db
-    newProduct.save((err, result) => {
+    await newProduct.save((err, result) => {
       if (!err) {
         res.send(result);
       } else {
@@ -75,7 +77,6 @@ const Product = require('../model/product.model')
     Product.findOneAndRemove({
       _id: req.params.id,
     }).then((removedProductDoc) => {
-      console.log(removedProductDoc)
       res.send(removedProductDoc);
     });
   };

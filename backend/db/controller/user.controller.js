@@ -8,7 +8,6 @@ const User = require("../model/user.model");
 exports.usersList = (req, res) => {
   User.find({}, "name email", (err, doc) => {
     if (!err) {
-      console.log(doc)
       res.send(doc);
     } else {
       res.send(err);
