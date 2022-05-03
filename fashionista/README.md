@@ -25,3 +25,18 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Runing steps 
+a. running frontend
+1. cd fashionista
+2. ng serve
+b. running backend
+1. npm start
+## work with Live demo
+a. Admin
+1. Login by username 'admin' and password 'admin'
+2. You can manage products and users by add, update and delete
+b. User
+1. You can create account or login
+2. Add products to wish list and cart 
+3. Manage wish list and cart by delete all products or selected ones

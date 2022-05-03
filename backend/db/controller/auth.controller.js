@@ -1,6 +1,7 @@
-const dotenv = require("dotenv").config();
 const jwt = require("jwt-simple");
 const User = require("../model/user.model");
+// to enable using .env variable
+require('dotenv').config();
 
 exports.login = async (req, res, next) => {
   try {

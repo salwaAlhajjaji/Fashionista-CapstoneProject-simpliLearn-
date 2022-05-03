@@ -30,7 +30,10 @@
         
         <li class="nav-item dropdown">
           <a class="nav-link" routerLinkActive="active" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fi fi-rr-user" style="font-size:25px" ></i>
+            <!-- <i class="fi fi-rr-user" style="font-size:25px" ></i> -->
+            <span class="material-symbols-rounded" style="font-size:27px" >
+              account_circle
+              </span>
           </a>
           <div  class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a *ngIf="!isLogedIn" class="dropdown-item" routerLink="/signin">Log in</a>
@@ -44,7 +47,11 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/cart" routerLinkActive="active">
-            <i class="fi fi-rr-shopping-bag" style="font-size:25px"></i>
+            <!-- <img class="svg" src = "assets/shopping-bag.svg"  width="20px"/> -->
+            <span class="material-symbols-rounded" style="font-size:27px">
+              shopping_bag
+              </span>
+            <!-- <i class="fi fi-rr-shopping-bag" style="font-size:25px"></i> -->
             <!-- {{ $cart_total == 0 ? "Nada no carrinho!" : ("R$ " . number_format($cart_total, 2, ',', '.'))   }} -->
           </a>
         </li>
