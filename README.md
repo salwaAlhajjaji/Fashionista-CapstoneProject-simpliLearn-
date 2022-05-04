@@ -17,12 +17,13 @@ VS Code, Angular, NodeJS, MongoDB or MySQL, AWS cloud services for deploying the
 
 ## Running steps 
 First run the backend
-1. `npm install`.
-2. `npm start`.
+1. `npm install`
+2. `npm start`
 <br />
+
 Second run the frontend
-1. cd fashionista.
-2. ng serve.
+1. `cd fashionista`
+2. `ng serve`
 
 ## The app provide these services
 a. Admin
@@ -30,6 +31,7 @@ a. Admin
 2. Login by username 'admin' and password 'admin'.
 3. You can manage products and users by add, update and delete.
 <br />
+
 b. User
 <br />
 1. You can create account or login.
