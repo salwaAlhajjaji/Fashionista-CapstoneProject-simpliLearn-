@@ -1,5 +1,3 @@
-# Fashionista
-
 # SimpliLearn MEAN Stack Developer Bootcamp (Capstone Project) - Fashionista Application
 Create a website that deal with online shopping for fashion goods and accessories.  
 
