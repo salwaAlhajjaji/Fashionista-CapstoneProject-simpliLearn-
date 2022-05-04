@@ -19,6 +19,9 @@ VS Code, Angular, NodeJS, MongoDB or MySQL, AWS cloud services for deploying the
 First run the backend
 1. `npm install`
 2. `npm start`
+<br />
+<br />
+
 Second run the frontend
 1. cd fashionista
 2. ng serve
@@ -27,6 +30,7 @@ Second run the frontend
 a. Admin
 1. Login by username 'admin' and password 'admin'
 2. You can manage products and users by add, update and delete
+<br />
 b. User
 1. You can create account or login
 2. Add products to wish list and cart 
