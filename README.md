@@ -20,8 +20,6 @@ First run the backend
 1. `npm install`
 2. `npm start`
 <br />
-<br />
-
 Second run the frontend
 1. cd fashionista
 2. ng serve
@@ -32,6 +30,7 @@ a. Admin
 2. You can manage products and users by add, update and delete
 <br />
 b. User
+<br />
 1. You can create account or login
 2. Add products to wish list and cart 
 3. Manage wish list and cart by delete all products or selected ones
