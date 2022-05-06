@@ -13,14 +13,14 @@ VS Code, Angular, NodeJS, MongoDB or MySQL, AWS cloud services for deploying the
 
 # Screenshots 
 ## Users Side
-**Home Page
+** Home Page
 <img width="1440" alt="Screen Shot 2022-05-04 at 4 47 04 AM" src="https://user-images.githubusercontent.com/24601296/167161057-9d86897c-97a2-426f-b910-d5341ab06b78.png">
 
-**Products Page
+** Products Page
 <img width="1440" alt="Screen Shot 2022-05-04 at 4 46 29 AM" src="https://user-images.githubusercontent.com/24601296/167161125-6616ce13-2f88-4c67-90a4-c058a5b6d126.png">
 
 
-**Wish List Page
+** Wish List Page
 <img width="1440" alt="Screen Shot 2022-05-04 at 4 46 42 AM" src="https://user-images.githubusercontent.com/24601296/167161174-ea4a20f8-96c2-4219-9f44-b33f2c212d20.png">
 
 **Cart Page
