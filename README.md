@@ -26,6 +26,7 @@ Second run the frontend
 2. `ng serve`
 
 Third discover Fashionista app
+
 a. Admin
 1. Paste this url in browser http://localhost:4200/admin
 2. Login by username 'admin' and password 'admin'
