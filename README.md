@@ -52,7 +52,7 @@ VS Code, Angular, NodeJS, MongoDB or MySQL, AWS cloud services for deploying the
 
 
 
-## Running steps (on termial)
+## Running steps (on terminal)
 First run the backend
 1. `cd backend`
 2. `npm install`
