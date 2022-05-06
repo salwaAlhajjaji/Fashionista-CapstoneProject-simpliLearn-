@@ -36,7 +36,7 @@ b. User
 
 ## The app provide these services
 a. Admin 
-You can manage products and users by add, update and delete
+1. You can manage products and users by add, update and delete
 
 b. User
 1. You can create account or login
