@@ -52,10 +52,11 @@ VS Code, Angular, NodeJS, MongoDB or MySQL, AWS cloud services for deploying the
 
 
 
-## Running steps 
+## Running steps (on termial)
 First run the backend
-1. `npm install`
-2. `npm start`
+1. `cd backend`
+2. `npm install`
+3. `npm start`
 
 Second run the frontend
 1. `cd fashionista`
